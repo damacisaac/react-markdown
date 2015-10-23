@@ -12,9 +12,7 @@
   "scripts": {
     "test-travis": "istanbul cover node_modules/.bin/_mocha --report lcovonly -- --reporter spec",
     "coverage": "istanbul cover node_modules/.bin/_mocha -- --reporter spec",
-    "pretest": "npm run lint",
     "lint": "eslint .",
-    "prepublish": "npm prune && npm test && npm run build",
     "build": "NODE_ENV=production webpack",
     "watch": "webpack --watch",
     "test": "mocha --reporter spec",
@@ -51,7 +49,7 @@
   },
   "dependencies": {
     "commonmark": "^0.19.0",
-    "commonmark-react-renderer": "git@github.com:damacisaac/commonmark-react-renderer.git"
+    "commonmark-react-renderer": "git://github.com/damacisaac/commonmark-react-renderer.git"
   },
   "peerDependencies": {
     "react": ">=0.13.3"
